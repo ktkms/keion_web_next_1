@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
 import CustomImage from "../Components/CustomImage";
 import EventList from "../Components/EventList";
 import { Metadata } from "next/dist/lib/metadata/types/metadata-interface";

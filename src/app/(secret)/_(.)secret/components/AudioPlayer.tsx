@@ -3,7 +3,6 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "@tremor/react";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
 
 const AudioPlayer: React.FC = () => {
   const audioRef1 = useRef<HTMLAudioElement | null>(null);
@@ -11,7 +10,6 @@ const AudioPlayer: React.FC = () => {
   const audioRef3 = useRef<HTMLAudioElement | null>(null);
   const audioRef4 = useRef<HTMLAudioElement | null>(null);
   const audioRef5 = useRef<HTMLAudioElement | null>(null);
-  const router = useRouter();
 
   useEffect(() => {
     // ここで認証を行う

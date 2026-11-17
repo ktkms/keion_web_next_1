@@ -26,7 +26,7 @@ class AudioContextManager {
   public getContext(): AudioContext {
     if (!this.audioContext) {
       try {
-        this.audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+        this.audioContext = new (window.AudioContext || (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext)();
         this.createNodes();
       } catch (err) {
         console.error("AudioContextの作成に失敗しました", err);
@@ -35,7 +35,7 @@ class AudioContextManager {
     } else if (this.audioContext.state === "closed") {
       // コンテキストが閉じていた場合は再作成
       try {
-        this.audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+        this.audioContext = new (window.AudioContext || (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext)();
         this.createNodes();
       } catch (err) {
         console.error("AudioContextの再作成に失敗しました", err);
