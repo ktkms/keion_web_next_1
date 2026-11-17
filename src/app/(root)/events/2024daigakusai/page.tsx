@@ -50,7 +50,6 @@ const EventsPage = () => {
   const { currentBand, nextBand, currentTime, currentDate } = getCurrentAndNextBand();
 
   const eventStartTime = "13:10";
-  const eventEndTime = "16:05";
   const eventDate = "2024-10-13";
 
   return (

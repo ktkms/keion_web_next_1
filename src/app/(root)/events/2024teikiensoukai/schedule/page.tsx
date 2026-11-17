@@ -5,7 +5,6 @@ import BandSchedule from "../../Components/BandSchedule";
 import { bandScheduleData } from "../data";
 import { events } from "@/app/data/events";
 import EventList from "../../Components/EventList";
-import { Metadata } from "next/dist/lib/metadata/types/metadata-interface";
 
 const EventsPage = () => {
   return (

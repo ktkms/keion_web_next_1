@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-const allowCors = (fn: Function) => async (req: NextApiRequest, res: NextApiResponse) => {
+const allowCors = (fn: (req: NextApiRequest, res: NextApiResponse) => void | Promise<void>) => async (req: NextApiRequest, res: NextApiResponse) => {
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS,PATCH,DELETE,POST,PUT");

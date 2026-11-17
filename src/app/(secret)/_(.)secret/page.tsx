@@ -1,9 +1,7 @@
 import { Metadata } from "next";
-import React, { useEffect, useRef, useState } from "react";
-import { Button } from "@tremor/react";
-import Image from "next/image";
+import React from "react";
 import TopLoading from "../../(root)/components/TopLoading";
-import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 import AudioPlayer from "./components/AudioPlayer";
 
@@ -19,13 +17,13 @@ const AudioPlayerPage: React.FC = () => {
     <>
       <header className="bg-gray-800 text-white">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a href="/" className="title-font font-medium text-white md:mb-0">
+          <Link href="/" className="title-font font-medium text-white md:mb-0">
             <h1 className="ml-3 text-xl">非公式コンテンツ</h1>
-          </a>
+          </Link>
           <nav className="md:ml-auto md:visible collapse flex flex-wrap items-center text-base justify-center">
-            <a href="/" className="mr-5 hover:text-gray-300">
+            <Link href="/" className="mr-5 hover:text-gray-300">
               ホーム
-            </a>
+            </Link>
           </nav>
         </div>
       </header>

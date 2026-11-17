@@ -37,7 +37,6 @@ const TopLoading: React.FC<TopLoadingProps> = ({ text, time }) => {
       prefersReducedMotion.addEventListener("change", handlePreferenceChange);
     } else {
       // Safari fallback
-      // @ts-ignore
       prefersReducedMotion.addListener(handlePreferenceChange);
     }
 
@@ -46,8 +45,7 @@ const TopLoading: React.FC<TopLoadingProps> = ({ text, time }) => {
       if (supportsEventListener) {
         prefersReducedMotion.removeEventListener("change", handlePreferenceChange);
       } else {
-        // @ts-ignore
-        prefersReducedMotion.removeListener(handlePreferenceChange);
+          prefersReducedMotion.removeListener(handlePreferenceChange);
       }
     };
   }, [time]);
